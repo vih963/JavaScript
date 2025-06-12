@@ -1,0 +1,47 @@
+body{
+    background: red;
+    padding: 0;
+    display: flexbox;
+    width: 200px;
+    height: 200px;
+    color: white;
+    text-align: center;
+    border: none;
+    border-radius: 1vh;
+}
+
+div#res{
+    font: 19pt Arial;
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 20px;
+}
+
+div#area{
+
+font-size: 18px;
+background-color: rgb(150, 215, 255);
+}
+
+.btn{
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 5px 5px 10px;
+   }
+.btn:hover{
+     cursor: pointer;
+    background-color: aqua;
+}
+
+#txtn1{
+    font: 18px Arial;
+     text-align: center;
+    border-radius: 3750%;
+      box-shadow: 5px 5px 10px;
+}
+
+#txtn2{
+    text-align: center;
+     border-radius: 75%;
+    box-shadow: 5px 5px 10px;
+}
+
