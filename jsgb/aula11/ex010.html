@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+h1 {
+  text-align: center;
+  position: relative;
+}
+h1:before,
+h1:after {
+  content: "";
+  width: 35%;
+  height: 1px;
+  background: #555;
+  position: absolute;
+  top: 50%;
+}
+h1:before {
+  left: 0;
+}
+h1:after {
+  right: 0;
+}
+#btn {
+    margin-top: 20px;
+    font-size: 30px;
+    border: solid 1px blue;
+    border-radius: 20px;
+    color: blue;
+    background-color: white;
+    transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s 
+}
+#btn:hover{
+     background-color: blue;
+    color: white;
+    transform: scale(1.2)
+}
+
+#txtvel {
+     color: #fff;
+  font-size: 28px;
+  width: 100%;
+  padding: 20px 5px 5px;
+  background-color: #4f4f4f;
+  border: none;
+  border-radius: 4px;
+}
+
+#res{
+    font-size: 30px;
+}
+</style>
+<body>
+    <h1>SISTEMA DE MULTAS</h1>
+    Velocidade do carro: 
+    <input  type="number" name="txtvel" id="txtvel"> KM/h
+    <input id="btn" type="button" value="VERIFICAR" onclick="calcular()">
+    <div id="res">
+
+    </div>
+    <img src="imagens/race-car-49.gif" alt="multado">
+    <script>
+        
+function calcular(){
+    var txtv = window.document.querySelector('input#txtvel')
+    var res = window.document.querySelector('div#res')
+    var vel = Number(txtv.value)
+    res.innerHTML = `<p>sua velocidade atual é <strong>${vel} KM/h</p></strong>`
+    if(vel > 60){
+        res.innerHTML += `<p>Voce esta <strong>multado</strong> </p>`
+    }
+    res.innerHTML += `<p>Diriga sempre com cinto de segurança</p>`
+
+}
+    </script>
+    
+</body>
+</html>
