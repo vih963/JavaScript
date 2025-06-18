@@ -19,15 +19,24 @@
       function validar() {
         var paisnac = window.document.querySelector("input#txtnac");
         var res = window.document.querySelector("div#res");
+        var pais = Number(paisnac.value)
         //var nac = Text(paisnac.value)
         //res.innerHTML (`VocÊ mora no ${nac}`)
 
                 if (paisnac == "brasil") {
           res.innerHTML += `Você é  você <strong> é BRASILEIRO</strong> `
         } else {          
-          res.innerHTML +=`Voce É ESTRANGEIRO`
+          res.innerHTML += `Voce É ESTRANGEIRO`
         }
       }
     </script>
   </body>
 </html>
+
+<!-- var pais = 'franca'
+console.log(`Vivendo em ${pais}`)
+ if (pais == 'Brasil'){
+    console.log('voce é Basileiro')    
+ } else {
+    console.log('Você é estrangeiro')
+ }// -->

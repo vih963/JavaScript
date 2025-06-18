@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+    <h1>Calculadora</h1>
+    <input  placeholder="DIGITE O VALOR" ="number" id="n1" /> 
+    <input placeholder="DIGITE OUTRO NUMERO" type="number" id="n2" />
+    <p></p>
+
+    <div class="res" id="res"></div>
+
+    <div class="caixa">
+      <button class="soma" id="soma" onclick="soma()">+</button>
+      <button class="subtrair" id="subtrair" onclick="subtrair()">-</button>
+      <button class="multiplicar" id="multiplicar" onclick="multiplicar()">*</button>
+      <button class="dividir" id="dividir" onclick="dividir()">/</button>
+    </div>
+
+    <script>
+      function soma() {
+        var v1 = window.document.querySelector("input#n1");
+        var v2 = window.document.querySelector("input#n2");
+        var v1 = Number(n1.value);
+        var v2 = Number(n2.value);
+        var total = v1 + v2;
+        var res = window.document.querySelector("div#res");
+
+        res.innerHTML = ` A soma de ${v1} + ${v2} é igual a ${total}`;
+      }
+
+      function subtrair() {
+        var v1 = window.document.querySelector("input#n1");
+        var v2 = window.document.querySelector("input#n2");
+        var v1 = Number(n1.value);
+        var v2 = Number(n2.value);
+        var total = v1 - v2;
+        var res = window.document.querySelector("div#res");
+
+        res.innerHTML = ` A subtração de ${v1} - ${v2} é igual a ${total}`;
+      }
+
+      function multiplicar() {
+        var v1 = window.document.querySelector("input#n1");
+        var v2 = window.document.querySelector("input#n2");
+        var v1 = Number(n1.value);
+        var v2 = Number(n2.value);
+        var total = v1 * v2;
+        var res = window.document.querySelector("div#res");
+
+        res.innerHTML = ` A multiplicação de ${v1} * ${v2} é igual a ${total}`;
+      }
+
+      function dividir() {
+        var v1 = window.document.querySelector("input#n1");
+        var v2 = window.document.querySelector("input#n2");
+        var v1 = Number(n1.value);
+        var v2 = Number(n2.value);
+        var total = v1 / v2;
+        var res = window.document.querySelector("div#res");
+
+        res.innerHTML = ` A divisão de ${v1} / ${v2} é igual a ${total}`;
+      }
+    </script>
+  </body>
+</html>
