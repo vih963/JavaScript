@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>VERIFICADOR DE IDADE</h1>
+<input type="text" id="idade" placeholder="Informe sua idade: ">
+<p></p>
+<input class="calcular" id="calcular" type="button" value="VERIFICAR" onclick="calcular()">
+<p></p>
+<div class="res" id="res"></div>
+
+<script>
+function calcular() {
+    var idade = window.document.querySelector('input#idade')
+    var res = window.document.querySelector('div#res')  
+    var idade =Number(idade.value)
+
+     if (idade <= 17){
+        res.innerHTML = ` Você tem ${idade} anos e é <strong>Menor de 
+            idade</strong>, <strong>entrada proibida!</strong><p> </p>Chame seu Pai para te acompanhar`
+       } else{
+        res.innerHTML = `Sua idade é ${idade}`
+        res.innerHTML  += " <strong>Pode entrar e curtir a festa</strong>"
+     }
+}
+</script>
+
+    
+</body>
+</html>
+
+<!-- 2. *Verificador de idade*: Crie um programa
+  que peça ao usuário sua idade e exiba uma 
+  mensagem dizendo se ele é maior ou menor
+   de idade. -->
