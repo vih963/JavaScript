@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PAR OU IMPAR</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>Numero é PAR ou IMPAR</h1>
@@ -12,19 +13,7 @@
     <input type="button" value="VERIFICAR" onclick="verificar()">
  <div id="res"></div>
 
-    <script>
-function verificar(){
-    var par = window.document.getElementById('par')
-    var par =Number(par.value)
-    var res = window.document.getElementById('res')
-
-    if (par % 2 == 0 ){
-res.innerHTML = `O Valor é par`
-    } else{
-        res.innerHTML = `O valor é impar`
-    }
-}
-    </script>
+<script src="script.js"></script>
 
 
 </body>
