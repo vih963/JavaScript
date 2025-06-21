@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contador</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>CONTADOR de 1 SEGUNDO</h1>
+
+    <h2>
+      Crie um contador que incremente um número a cada segundo e exiba o valor
+      atual.
+    </h2>
+
+    <div id="contador"></div>
+
+    <script>
+      var contador = 0;
+      var cont = window.document.getElementById("contador");
+
+      setInterval(() => {
+        contador++;
+         cont.innerHTML = contador;}
+      ,1000
+     )
+     
+     
+    </script>
+  </body>
+</html>

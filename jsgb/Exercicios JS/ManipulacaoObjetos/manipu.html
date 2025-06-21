@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulando dados</title>
+    <link rel="stylesheet" href="stylestyle.css">
+</head>
+<body>
+
+    <h1>Exercícios de Manipulação de Objetos</h1>
+
+    <div id="Resp">DADOS DO ALUNO</div>
+    <button onclick="validar()"> CLIQUE AQUI</button>
+
+    <script>
+function validar(){
+    var nome ='Vinicius'
+    var idade ='33'
+    var cidade = 'JARINU'
+
+    document.getElementById('Resp').textContent =`${nome} de ${idade} anos de idade, e mora em ${cidade}`
+}
+
+
+    </script>
+    
+</body>
+</html>
