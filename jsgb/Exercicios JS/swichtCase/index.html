@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Verificar dia da Semana</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div>
+      <h1>Pegando o dia da semana automaticamente de seu PC</h1>
+    </div>
+
+    <input type="number" name="diaSem" id="diaSem" placeholder="Dia Da semana" />
+    <input type="button" value="SEMANA" id="semana" onclick="verificar()" />
+    <div id="res"></div>
+
+    <script>
+      function verificar() {
+        var data = document.getElementById('diaSem')
+        var res = window.document.getElementById("res");
+        var valor = Number(data.value)
+        var nomeDia = ""
+        
+        switch (valor) {
+          case 0:
+            nomeDia = "Domingo"
+            break
+          case 1:
+            nomeDia = "Segunda";
+            break;
+          case 2:
+            nomeDia = "Terça";
+            break;
+          case 3:
+            nomeDia = "Quarta";
+            break;
+          case 4:
+            nomeDia = "Quinta";
+            break;
+            return
+          case 5:
+            nomeDia = "Sexta";
+            break;
+          case 6:
+            nomeDia = "Sábado";
+            break;
+          default:
+            res.innerHTML = "Dia invalido";
+           
+              }        
+        res.innerHTML = `Hoje é  ${nomeDia}`;
+      }
+    </script>
+  </body>
+</html>
