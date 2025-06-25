@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora de COR</title>
+  </head>
+  <body>
+    <h1>Vamos ver qual a COR</h1>
+    <input type="text" id="cores" placeholder="INFORME SUA COR FAVORITA" />
+    <input type="button" id="btn" value="CERIFICAR COR" onclick="verificar()" />
+    <div id="res"></div>
+    
+
+    <script>
+      function verificar() {
+        var cores = document.getElementById("cores");
+        var res = document.getElementById("res");
+        var input = Number(cores.value);
+        var nome = "";
+
+        switch (input) {
+          case 1:
+            document.body.style.backgroundColor = "red";
+            break;
+          case 2:
+            document.body.style.backgroundColor = "blue";
+            nome = "você escolheu o Azul!";
+            break;
+          case 3:
+            document.body.style.backgroundColor = "black";
+            document.body.style.color = 'white'
+            nome = "você escolheu o Preto!";
+            break;
+          case 4:
+            document.body.style.backgroundColor = "yellow";
+            nome = "você escolheu o Amarelo!";
+            break;
+          default:
+            nome = "Desculpe ainda não temos essa cor";
+            return;
+        }
+
+        res.innerHTML =
+          "Voce escolheu o numero" + input + "e ela é igual " + nome;
+      }
+    </script>
+  </body>
+</html>
