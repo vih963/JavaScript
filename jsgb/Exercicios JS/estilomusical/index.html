@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estilo Musical</title>
+</head>
+<body>
+    <h1>Escolha qual estilo de musica quer ouvir!</h1>
+
+    <input type="number" id="tipo" placeholder="Escolha de 1 a 5" >
+    <input type="button"  value="Estilo" onclick="escolher()">
+    <div id="res"></div>
+
+    <script>
+function escolher() {
+    var escolheMusica = document.getElementById('tipo')
+    var res = document.getElementById('res')
+    var estilo = Number(escolheMusica.value)
+    var musica =""
+
+    switch (estilo){
+        case 0:
+            musica ='rock'
+            break
+             case 1:
+            musica ='pop'
+            break
+             case 2:
+            musica ='jazz'
+            break
+             case 3:
+            musica ='sertanejo'
+            break
+             case 4:
+            musica ='Pagode'
+            break
+            default:
+                musica ="Opção invalida, esolha entre  1 a 5"
+    }
+    res.innerHTML = (`O numero escolhido foi <strong>${estilo}</strong>! <br>
+    <strong>Estilo musical escolhido é ${musica}</strong>`)
+}
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escolha o tipo de filme que quer ver</title>
+</head>
+<body>
+
+    <h1>Qual o tipo de Filme que vocÊ gosta?</h1>
+    <input type="number" id="tipo" placeholder="Escolha de 1 a 5">
+    <input type="button" value="TIPO DE FILME" id="filme"  onclick="verificar()">
+    <div id="res"></div>
+
+    <script>
+function verificar(){
+    var tFilme = document.getElementById('tipo')
+    var res = document.getElementById('res') 
+    var genero =Number(tFilme.value)
+    var nome =""
+
+    switch (genero){
+        case 1:
+            nome = 'ação'
+            break
+            case 2:
+            nome = 'comédia'
+            break
+            case 3:
+            nome = 'terror'
+            break
+            case 4:
+            nome = 'suspense'
+            break
+            case 5:
+            nome = 'ADULTO + 18'
+            break
+            default:
+                nome = 'opção invalida'
+    }
+
+res.innerHTML =(`O tipo de filme que você escolheu foi <strong>${nome}</strong>`)
+    
+}
+
+
+
+    </script>
+
+
+    
+</body>
+</html>
