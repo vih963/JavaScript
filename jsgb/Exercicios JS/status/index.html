@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Status do Usuario</title>
+</head>
+<body>
+    <h1>Vamos verificar o seu nivel de acesso!</h1>
+    <input type="text" id="acesso" placeholder="Informe o nivel" >
+    <input type="button" id="btn" value="VERIFICAR NIVEL" onclick="verificar()">
+    <div id="res"></div>
+
+    <script>
+function verificar(){
+    var nivel = document.getElementById('acesso')
+    var res = document.getElementById('res')
+    var acesso =Number(nivel.value)
+    var nome =""
+
+    switch(acesso){
+        case 1:
+            nome ='admin'
+            break
+            case 2:
+            nome ='moderador'
+            break
+            case 3:
+            nome ='usuário'
+            break
+            case 4:
+            nome ='master'
+            break
+            default:
+                nome ='Diretiro de acesso invalido'
+                return
+    }
+    res.innerHTML = (`Seu status corresponde a <strong>${nome}</strong>`)
+}
+
+
+
+
+    </script>
+
+    
+</body>
+</html>
