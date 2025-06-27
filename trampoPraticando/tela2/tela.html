@@ -1,0 +1,169 @@
+ <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela</title>
+    
+ <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .product-list {
+            flex: 3;
+            border: 1px solid #ddd;
+            background-color: #fff;
+            margin-right: 10px;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .product-list table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .product-list th, .product-list td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .product-list th {
+            background-color: #f4f4f4;
+        }
+
+        .controls {
+            flex: 2;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+
+        .buttons button {
+            flex: 1;
+            height: 60px;
+            border: none;
+            background-color: #3498db;
+            color: white;
+            font-size: 14px;
+            cursor: pointer;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .buttons button:hover {
+            background-color: #2980b9;
+        }
+
+        .summary {
+            margin-top: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #fff;
+        }
+
+        .summary div {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+        }
+
+        .summary .total {
+            font-size: 18px;
+            font-weight: bold;
+            color: #e74c3c;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #34495e;
+            color: white;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Product List Section -->
+        <div class="product-list">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Produto</th>
+                        <th>Qtd</th>
+                        <th>Valor</th>
+                        <th>Un</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>LANCH+BEBID + SOBREMESA</td>
+                        <td>1</td>
+                        <td>6.45</td>
+                        <td>UN</td>
+                    </tr>
+                    <tr>
+                        <td>AMERICANO</td>
+                        <td>1</td>
+                        <td>7.45</td>
+                        <td>UN</td>
+                    </tr>
+                    <tr>
+                        <td>BAURU</td>
+                        <td>1</td>
+                        <td>7.50</td>
+                        <td>UN</td>
+                    </tr>
+                    <!-- Additional rows -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Controls Section -->
+        <div class="controls">
+            <div class="buttons">
+                <button>X-BACON</button>
+                <button>X-FRANGO</button>
+                <button>X-EGG</button>
+                <button>SUCO DE LARANJA</button>
+                <!-- More buttons -->
+            </div>
+
+            <div class="summary">
+                <div>
+                    <span>Subtotal:</span>
+                    <span>R$ 10,00</span>
+                </div>
+                <div>
+                    <span>Descontos:</span>
+                    <span>R$ 1,50</span>
+                </div>
+                <div class="total">
+                    <span>Total:</span>
+                    <span>R$ 11,50</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">FREEPDV - Simplicidade e Eficiência</div>
