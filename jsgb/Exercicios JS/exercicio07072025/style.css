@@ -1,0 +1,25 @@
+body{
+    background: rgb(19, 19, 58)  
+}
+
+header {
+   color: black;
+   text-align: center;
+
+}
+
+section {
+  background: white
+  border-radius: 10px;
+  padding: 15px;
+  width: 500px;
+  margin: auto;
+  box-shadow: 5px 5px 10px black;
+}
+
+footer {
+    color: black;
+    text-align: center;
+    font-style: italic;
+    padding: 10px;
+}
